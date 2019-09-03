@@ -265,8 +265,9 @@ body, p, h1, h2, h3, h4, h5, h6 {
   transition: all 400ms linear 0s;
 }
 .portfolio{
-margin-left: -250px;
-font-size: 20px;
+margin: 5px;
+margin-left: -200px;
+font-size: 15px;
 color  : white;
 font-family: "Raleway", sans-serif;
 font-weight: bold;
