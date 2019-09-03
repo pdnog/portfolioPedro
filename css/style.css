@@ -1,18 +1,7 @@
 /*----------------------------------------------------
 @File: Default Styles
-@Author: Rocky Ahmed
-@URL: http://wethemez.com
-Email: rockybd1995@gmail.com
-
-This file contains the styling for the actual theme, this
-is the file you need to edit to change the look of the
-theme.
 ---------------------------------------------------- */
 /*=====================================================================
-@Template Name: Ramirez
-@Author: Rocky Ahmed
-@Developed By: Rocky Ahmed
-@Developer URL: http://rocky.wethemez.com
 
 @Default Styles
 
@@ -37,6 +26,17 @@ Table of Content:
 
 /*---------------------------------------------------- */
 /*----------------------------------------------------*/
+
+:root {
+  --all: #19B18F;
+  --top: #ABD8B9;
+  --bord: #0F6A51;
+  /* 19B18F */
+
+  ;
+}
+
+
 ul {
   list-style: none;
   margin: 0px;
@@ -59,22 +59,28 @@ a:hover, a:focus {
 body {
   line-height: 24px;
   font-size: 13px;
-  color: #333333;
+  background-color:var(--top);
   font-family: "Raleway", sans-serif;
 }
 
 body.light_bg {
-  background: url(../img/Pattern_Light.png) repeat scroll center center;
+
+  background-color: var(--all);
+
+  background-image: radial-gradient(#2C9576, #ABD8B9, #2C9576);
+      /* background: url(../img/Pattern_Light.png) repeat scroll center center; */
   background-size: contain;
 }
 
 body.dark_bg {
-  background: url(../img/Pattern_Drak.png) repeat scroll center center;
-  background-size: contain;
+  background-color: var(--all);
+
+  background-image: radial-gradient(#2C9576, #ABD8B9, #2C9576);
+    background-size: contain;
 }
 
 body .content_inner_bg {
-  background: #efefef;
+  background:var(--top);
 }
 
 body, p, h1, h2, h3, h4, h5, h6 {
@@ -125,7 +131,7 @@ body, p, h1, h2, h3, h4, h5, h6 {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #ffffff;
+  background-color: #b3c0bc;
   z-index: 99999999;
 }
 
@@ -142,8 +148,8 @@ body, p, h1, h2, h3, h4, h5, h6 {
   -webkit-animation: load 1s infinite linear;
   -moz-animation: load 1s infinite linear;
   animation: load 1s infinite linear;
-  background: -webkit-linear-gradient(top, #fec608 10%, rgba(255, 255, 255, 0) 100%);
-  background: linear-gradient(to bottom, #fec608 10%, rgba(255, 255, 255, 0) 100%);
+  background: -webkit-linear-gradient(top, var(--all) 10%, rgba(255, 255, 255, 0) 100%);
+  background: linear-gradient(to bottom, var(--all) 10%, rgba(255, 255, 255, 0) 100%);
   height: 4em;
   width: 4em;
   border-radius: 50%;
@@ -160,8 +166,8 @@ body, p, h1, h2, h3, h4, h5, h6 {
   left: 0;
   height: 100%;
   width: 100%;
-  background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 50%, #fec608 50%);
-  background: linear-gradient(to right, rgba(255, 255, 255, 0) 50%, #fec608 50%);
+  background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 50%, var(--all) 50%);
+  background: linear-gradient(to right, rgba(255, 255, 255, 0) 50%, var(--all) 50%);
   border-radius: 100%;
   content: '';
 }
@@ -220,7 +226,7 @@ body, p, h1, h2, h3, h4, h5, h6 {
 /* Header Menu Area css
 ============================================================================================ */
 .header_area {
-  background: #fec608;
+  background: var(--all);
 }
 
 .header_area .navbar.navbar-default {
@@ -252,10 +258,20 @@ body, p, h1, h2, h3, h4, h5, h6 {
   font-family: "Raleway", sans-serif;
   text-transform: uppercase;
   font-weight: bold;
+  font-size:20px;
   color: #222222;
   display: inline-block;
   transition: all 400ms linear 0s;
 }
+.portfolio{
+margin-left: -250px;
+font-size: 20px;
+color  : white;
+font-family: "Raleway", sans-serif;
+font-weight: bold;
+}
+
+
 
 .header_area .navbar.navbar-default .navbar-collapse .nav.navbar-nav li:hover a, .header_area .navbar.navbar-default .navbar-collapse .nav.navbar-nav li.active a {
   color: #fff;
@@ -294,6 +310,10 @@ body, p, h1, h2, h3, h4, h5, h6 {
   max-width: 322px;
 }
 
+.person_img img{
+  width: 98%;
+  height: 100%;
+}
 .about_person_area .person_img img {
   max-width: 100%;
 }
@@ -316,7 +336,7 @@ body, p, h1, h2, h3, h4, h5, h6 {
 }
 
 .about_person_area .person_details h3 span {
-  color: #fec608;
+  color: var(--all);
 }
 
 .about_person_area .person_details h4 {
@@ -344,7 +364,7 @@ body, p, h1, h2, h3, h4, h5, h6 {
 }
 
 .about_person_area .person_details .person_information ul li a {
-  font-size: 13px;
+  font-size: 18px;
   line-height: 26px;
   color: #333333;
   font-family: "Raleway", sans-serif;
@@ -355,7 +375,7 @@ body, p, h1, h2, h3, h4, h5, h6 {
 }
 
 .about_person_area .person_details .person_information ul + ul li a {
-  font-size: 13px;
+  font-size: 18px;
   line-height: 26px;
   color: #666666;
   font-family: "Raleway", sans-serif;
@@ -373,24 +393,31 @@ body, p, h1, h2, h3, h4, h5, h6 {
   border: 1px solid #677fb5;
   display: block;
   line-height: 40px;
-  font-size: 18px;
+  font-size: 32px;
   border-radius: 5px;
   transition: all 400ms linear 0s;
   color: #677fb5;
 }
 
+
 .social_icon li:nth-child(2) a {
   color: #70c2e9;
   border-color: #70c2e9;
+  height: 40px;
+  width: 40px;
 }
 
 .social_icon li:nth-child(2):hover a {
   background: #70c2e9;
+  height: 40px;
+  width: 40px;
 }
 
 .social_icon li:nth-child(3) a {
   color: #895a4d;
   border-color: #895a4d;
+  height: 40px;
+  width: 40px;
 }
 
 .social_icon li:nth-child(3):hover a {
@@ -468,13 +495,26 @@ body, p, h1, h2, h3, h4, h5, h6 {
 ============================================================================================ */
 .download_btn {
   display: block;
-  background: #fec608;
+  background: var(--all);
   text-align: center;
   line-height: 40px;
-  border-radius: 20px;
+  border-radius: 5px;
   color: #222222;
   font-size: 18px;
-  font-family: "Yellowtail", cursive;
+  font-family: "Raleway", sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+
+.download_btn2 {
+  display: block;
+  background: var(--all);
+  text-align: center;
+  line-height: 40px;
+  border-radius: 5px;
+  color: #222222;
+  font-size: 18px;
+  font-family: "Raleway", sans-serif;
   position: relative;
   overflow: hidden;
 }
@@ -517,13 +557,13 @@ body, p, h1, h2, h3, h4, h5, h6 {
   max-width: 140px;
   display: block;
   line-height: 40px;
-  color: #fff;
+  color: rgb(150, 132, 132);
   font-family: "Raleway", sans-serif;
   box-shadow: none !important;
   outline: none !important;
   border: none;
   border-radius: 0px;
-  background: #fec608;
+  background: var(--all);
   width: 100%;
   padding: 0px;
   position: relative;
@@ -555,11 +595,11 @@ body, p, h1, h2, h3, h4, h5, h6 {
 }
 
 .contact_btn:focus {
-  background: #fec608;
+  background: var(--all);
 }
 
 .contact_btn:hover {
-  background: #fec608;
+  background: var(--all);
 }
 
 .contact_btn:hover span {
@@ -618,7 +658,7 @@ body, p, h1, h2, h3, h4, h5, h6 {
 }
 
 .myskill_area .skill_item_inner .single_skill .progress .progress-bar {
-  background: #fec608;
+  background: var(--all);
   box-shadow: none;
 }
 
@@ -656,7 +696,7 @@ body, p, h1, h2, h3, h4, h5, h6 {
   left: 50%;
   width: 5px;
   margin-left: -2.5px;
-  background: rgba(254, 198, 8, 0.5);
+  background:var(--bord);
 }
 
 .education_area .education_inner_area .education_item {
@@ -677,7 +717,7 @@ body, p, h1, h2, h3, h4, h5, h6 {
   height: 50px;
   width: 50px;
   border-radius: 50%;
-  border: 4px solid #f7da7b;
+  border: 4px solid var(--bord);
   text-align: center;
   color: #fff;
   line-height: 43px;
@@ -685,12 +725,12 @@ body, p, h1, h2, h3, h4, h5, h6 {
   font-size: 30px;
   font-weight: bold;
   text-transform: uppercase;
-  background: #fec608;
+  background: var(--all);
 }
 
 .education_area .education_inner_area .education_item:after {
   content: "";
-  background: #f7da7b;
+  background:var(--bord);
   height: 4px;
   position: absolute;
   right: -78px;
@@ -725,7 +765,7 @@ body, p, h1, h2, h3, h4, h5, h6 {
 
 .education_area .education_inner_area .education_item h6 {
   font-size: 14px;
-  color: #fec608;
+  color: var(--all);
   font-family: "Raleway", sans-serif;
   font-weight: bold;
 }
@@ -757,7 +797,7 @@ body, p, h1, h2, h3, h4, h5, h6 {
 /* Service Area css
 ============================================================================================ */
 .service_area {
-  background: #fec608;
+  background: var(--all);
   padding: 0px 50px 60px 50px;
 }
 
@@ -835,7 +875,7 @@ body, p, h1, h2, h3, h4, h5, h6 {
 .portfolio_area .porfolio_menu .causes_filter li a:before {
   content: "";
   height: 5px;
-  background: #fec608;
+  background: var(--all);
   width: 100%;
   position: absolute;
   left: 0px;
@@ -930,7 +970,7 @@ body, p, h1, h2, h3, h4, h5, h6 {
 }
 
 .portfolio_area .portfolio_list_inner .portfolio_item:hover .portfolio_title {
-  background: #fec608;
+  background: var(--all);
 }
 
 .portfolio_area .portfolio_list_inner .portfolio_item:hover .portfolio_title h4 {
@@ -967,7 +1007,7 @@ body, p, h1, h2, h3, h4, h5, h6 {
 }
 
 .twitter_area ul li a {
-  color: #fec608;
+  color: var(--all);
   font-size: 14px;
   line-height: 24px;
   font-family: "Raleway", sans-serif;
@@ -1077,7 +1117,7 @@ body, p, h1, h2, h3, h4, h5, h6 {
 }
 
 .blog_slider_area .blog_slider_inner .item h5 a {
-  color: #fec608;
+  color: var(--all);
 }
 
 .blog_slider_area .owl-prev {
@@ -1092,7 +1132,11 @@ body, p, h1, h2, h3, h4, h5, h6 {
 }
 
 .blog_slider_area .owl-prev:hover {
-  color: #fec608;
+  color: var(--all);
+}
+
+.download_btn2:hover{
+  color: white;
 }
 
 .blog_slider_area .owl-next {
@@ -1107,7 +1151,7 @@ body, p, h1, h2, h3, h4, h5, h6 {
 }
 
 .blog_slider_area .owl-next:hover {
-  color: #fec608;
+  color: var(--all);
 }
 
 .contact_title h3 {
@@ -1140,13 +1184,13 @@ body, p, h1, h2, h3, h4, h5, h6 {
 .left_contact_details .media .media-left i {
   height: 60px;
   width: 60px;
-  background: #fec608;
+  background: var(--all);
   color: #fff;
   font-size: 30px;
   text-align: center;
   line-height: 60px;
   border-radius: 50%;
-  border: 1px solid #fec608;
+  border: 1px solid var(--all);
   transition: all 400ms linear 0s;
 }
 
@@ -1168,7 +1212,7 @@ body, p, h1, h2, h3, h4, h5, h6 {
 
 .left_contact_details .media:hover .media-left i {
   background: transparent;
-  color: #fec608;
+  color: var(--all);
 }
 
 .contact_from_area .form-group {
@@ -1214,7 +1258,7 @@ body, p, h1, h2, h3, h4, h5, h6 {
 }
 
 .contact_from_area .form-group input:focus {
-  border-color: #fec608;
+  border-color: var(--all);
 }
 
 .contact_from_area .form-group textarea {
@@ -1257,7 +1301,7 @@ body, p, h1, h2, h3, h4, h5, h6 {
 }
 
 .contact_from_area .form-group textarea:focus {
-  border-color: #fec608;
+  border-color: var(--all);
 }
 
 .contact_from_area .form-group:last-child {
@@ -1306,7 +1350,7 @@ body, p, h1, h2, h3, h4, h5, h6 {
   display: block;
   margin-right: 5px;
   margin-bottom: 5px;
-  background: #fec608;
+  background: var(--all);
 }
 
 .envalab-style-switch .switched-options .styles li:nth-child(2) a {
@@ -1437,7 +1481,7 @@ body, p, h1, h2, h3, h4, h5, h6 {
 
 .footer_copyright .pull-left h5 a {
   font-weight: bold;
-  color: #fec608;
+  color: var(--all);
 }
 
 .footer_copyright .pull-right .navbar-nav li {
@@ -1460,7 +1504,7 @@ body, p, h1, h2, h3, h4, h5, h6 {
 }
 
 .footer_copyright .pull-right .navbar-nav li:hover a, .footer_copyright .pull-right .navbar-nav li.active a {
-  color: #fec608;
+  color: var(--all);
 }
 
 /* End Footer area css
